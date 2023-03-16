@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <title>Comments</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+        <div class="comments">
+                <div class="comments__body">
+                    <form class="comments__form form" name="comment" action="#">
+                        <div class="form__body">
+                        <div class="form__item">
+                            <label for="name">Имя</label>
+                            <input class="form__name" type="text" id="name" name="name" placeholder="Введите имя">
+                            
+                        </div>
+                        <div class="form__item">
+                            <label for="date">Дата</label>
+                            <input class="form__date" type="date" id="date" name="date">
+                        </div>
+                        <div class="form__item">
+                            <textarea class="form__text" type="text" id="text" name="text" placeholder="Введите текст комментария..." cols="30" rows="10"></textarea>
+                        </div>
+                        <button class="form__button button">Отправить</button>
+                        </div>
+                    </form>
+                    <div class="comments__items comment">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
