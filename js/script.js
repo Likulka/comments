@@ -52,20 +52,18 @@ function addComment(){
                                 <p class="comment__user atribute">${form.name.value}</p>
                                 <p class="comment__date atribute">${setDate(form.date.valueAsDate)}</p>
                                 </div>`;
-                                
-                                // <p class="comment__text">${form.text.value}</p>                                
-        
+                                        
     let text = document.createElement('p');
     text.classList.add('comment__text');
     text.innerHTML=form.text.value;
 
     let remBtn = document.createElement('button');
-    remBtn.className = 'comment__remove'
-    remBtn.addEventListener('click', (event) => event.target.parentNode.parentNode.remove());
+    remBtn.className = 'comment__remove';
+    remBtn.onclick = function(event){event.target.parentNode.parentNode.remove()};
     
     let favorite = document.createElement('button');
     favorite.className = 'comment__favorite';
-    favorite.addEventListener('click', (event) => event.target.classList.toggle('like'))
+    favorite.onclick = function(event) { event.target.classList.toggle('like')};
     
     commentItem.firstChild.append(text);
     commentItem.firstChild.append(favorite);
